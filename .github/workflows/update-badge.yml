@@ -1,0 +1,32 @@
+name: Atualizar Badge GitHub Stats
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"  # Executa a cada 6 horas
+  workflow_dispatch:       # Permite rodar manualmente no GitHub
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositório
+        uses: actions/checkout@v3
+
+      - name: Atualizar parâmetro `v=` no README.md
+        run: |
+          timestamp=$(date +%s)
+          sed -i "s/\(github-readme-stats.*\?v=\)[0-9]*/\1$timestamp/" README.md
+
+      - name: Commit e push se houver mudanças
+        run: |
+          git config user.name "github-actions"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if [[ `git status --porcelain` ]]; then
+            git add README.md
+            git commit -m "🔄 Atualização automática do badge GitHub Stats"
+            git push
+          else
+            echo "Nenhuma mudança detectada."
+          fi
