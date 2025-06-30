@@ -2,8 +2,8 @@ name: Atualizar Badge GitHub Stats
 
 on:
   schedule:
-    - cron: "0 */6 * * *"  # Executa a cada 6 horas
-  workflow_dispatch:       # Permite rodar manualmente no GitHub
+    - cron: "*/1 * * * *"  # roda a cada minuto
+
 
 jobs:
   update-badge:
