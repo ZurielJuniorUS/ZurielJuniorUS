@@ -83,7 +83,7 @@ Me chamo Zuriel Junior, tenho 20 anos e sou natural de Goiânia. Sou programador
          
   ### 📈 Estatísticas
 
-![GitHub Stats](https://github-readme-stats-zuriel-juniors-projects.vercel.app/api?username=ZurielJuniorUS&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&locale=pt-br)
+![GitHub Stats](https://github-readme-stats-zuriel-juniors-projects.vercel.app/api?username=ZurielJuniorUS&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&locale=pt-br&cache_seconds=60)
 
 
           
